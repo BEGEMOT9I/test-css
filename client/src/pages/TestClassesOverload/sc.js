@@ -1,7 +1,7 @@
 // @flow
 import styled from 'styled-components'
 
-const ELEMENTS_COUNT = 10000
+const ELEMENTS_COUNT = 1000
 
 const Wrapper = styled.section`
   display: flex;
