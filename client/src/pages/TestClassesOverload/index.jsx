@@ -1,9 +1,12 @@
 // @flow
 import React, { Component } from 'react'
+import injectSheet from 'react-jss'
 
-import classes from './styles.scss'
+import styles, { COUNT_ELEMENTS } from './styles'
 
-type Props = {}
+type Props = {
+  classes: Object
+}
 type State = {}
 
 class TestClassesOverload extends Component<Props, State> {
@@ -14,11 +17,13 @@ class TestClassesOverload extends Component<Props, State> {
 
     this.elements = []
 
-    for (let i = 0; i < 1000; i += 1) {
+    for (let i = 0; i < COUNT_ELEMENTS; i += 1) {
       this.elements.push(i)
     }
   }
   render() {
+    const { classes } = this.props
+
     return (
       <section className={classes.container}>
         {this.elements.map(index => (
@@ -29,4 +34,4 @@ class TestClassesOverload extends Component<Props, State> {
   }
 }
 
-export default TestClassesOverload
+export default injectSheet(styles)(TestClassesOverload)
