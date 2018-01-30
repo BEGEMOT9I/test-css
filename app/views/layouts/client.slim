@@ -1,0 +1,15 @@
+doctype html
+html lang="ru" prefix="og: http://ogp.me/ns#"
+  head
+    
+    = csrf_meta_tags
+  body
+    = javascript_pack_tag 'vendor'
+
+    = redux_store('store')
+    = react_component('ClientApp', id: 'root')
+    
+    = javascript_pack_tag 'client'
+
+    - if !Rails.env.development?
+      = stylesheet_pack_tag 'client'

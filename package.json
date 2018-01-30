@@ -1,0 +1,16 @@
+{
+  "name": "rails-template",
+  "private": true,
+  "scripts": {
+    "postinstall": "cd client && yarn install && yarn flow-typed-install && cd ..",
+    "build": "cd client && yarn install && yarn build:prod",
+    "precommit": "cd client && yarn lint && cd ..",
+    "flow": "cd client && yarn flow && cd ..",
+    "flow-typed": "cd client && yarn flow-typed-install && cd ..",
+    "lint": "cd client && yarn lint-staged && cd .."
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^0.14.3"
+  }
+}

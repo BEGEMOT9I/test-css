@@ -1,0 +1,31 @@
+.page {
+  &Wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  &Appear,
+  &Enter {
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0;
+
+    &Active {
+      opacity: 1;
+      transition: opacity 1s ease;
+    }
+  }
+
+  &Exit {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    opacity: 1;
+
+    &Active {
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+  }
+}

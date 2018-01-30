@@ -1,0 +1,19 @@
+[ignore]
+.*/node_modules/
+
+[include]
+
+[libs]
+flow-typed/dependecies
+flow-typed/globalTypes
+
+[lints]
+
+[options]
+module.system=node
+module.name_mapper='.*\(.s?css\)' -> 'CSSModule'
+module.name_mapper='.*\(.svg\)' -> 'empty/object'
+module.name_mapper='.*\(.png\)' -> 'empty/object'
+module.name_mapper='.*\(.jpg\)' -> 'empty/object'
+module.name_mapper='.*\(.webp\)' -> 'empty/object'
+suppress_comment= \\(.\\|\n\\)*\\$FlowIgnore
