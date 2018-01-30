@@ -53,7 +53,8 @@
     "redux-logger": "^3.0.6",
     "redux-saga": "^0.16.0",
     "reselect": "^3.0.1",
-    "cxs": "^6.1.0",
+    "glamor": "^2.20.40",
+    "glamorous": "^4.11.4",
     "workbox-webpack-plugin": "^3.0.0-alpha.5"
   },
   "devDependencies": {
