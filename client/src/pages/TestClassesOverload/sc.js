@@ -1,9 +1,9 @@
 // @flow
-import cxs from 'cxs'
+import cxs from 'cxs/component'
 
 const ELEMENTS_COUNT = 10000
 
-const container = cxs({
+const Wrapper = cxs('section')({
   display: 'flex',
   flexWrap: 'wrap',
   width: '100%',
@@ -13,11 +13,11 @@ const container = cxs({
 let result = {}
 
 for (let i = 0; i < ELEMENTS_COUNT; i += 1) {
-  result[`Tco${i}`] = cxs({
+  result[`Tco${i}`] = cxs('div')({
     width: '20px',
     height: '20px',
     backgroundColor: 'red'
   })
 }
 
-export { container, result, ELEMENTS_COUNT }
+export { Wrapper, result, ELEMENTS_COUNT }
