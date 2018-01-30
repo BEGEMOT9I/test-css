@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
-import classes from './styles.scss'
+import { Wrapper } from './sc'
 
 type Props = {}
 type State = {}
@@ -10,9 +10,9 @@ class Home extends Component<Props, State> {
 
   render() {
     return (
-      <section className={classes.container}>
+      <Wrapper>
         <h1>Hi</h1>
-      </section>
+      </Wrapper>
     )
   }
 }
