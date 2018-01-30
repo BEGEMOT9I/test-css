@@ -1,6 +1,6 @@
 // @flow
 
-export const COUNT_ELEMENTS = 10000
+export const COUNT_ELEMENTS = 1000
 
 const styles = {
   container: {

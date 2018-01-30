@@ -1,6 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 import injectSheet from 'react-jss'
+import { Link } from 'react-router-dom'
 
 import styles, { COUNT_ELEMENTS } from './styles'
 
@@ -29,6 +30,7 @@ class TestClassesOverload extends Component<Props, State> {
         {this.elements.map(index => (
           <div key={`tco-${index}`} className={classes[`tco-${index}`]} />
         ))}
+        <Link to="test-styles-overload">Test styles overload</Link>
       </section>
     )
   }
