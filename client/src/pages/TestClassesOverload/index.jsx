@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import classes from './styles.scss'
 
@@ -14,7 +15,7 @@ class TestClassesOverload extends Component<Props, State> {
 
     this.elements = []
 
-    for (let i = 0; i < 10000; i += 1) {
+    for (let i = 0; i < 1000; i += 1) {
       this.elements.push(i)
     }
   }
@@ -24,6 +25,7 @@ class TestClassesOverload extends Component<Props, State> {
         {this.elements.map(index => (
           <div key={`tco-${index}`} className={classes[`tco-${index}`]} />
         ))}
+        <Link to="test-styles-overload">Test styles overload</Link>
       </section>
     )
   }
