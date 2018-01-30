@@ -1,6 +1,8 @@
 const path = require('path')
 const webpack = require('webpack')
 const Config = require('webpack-config').default
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer')
+  .BundleAnalyzerPlugin
 
 const webpackConfigLoader = require('react-on-rails/webpackConfigLoader')
 
@@ -36,7 +38,8 @@ let config = new Config().extend('config/webpack.base.js').merge({
       'process.env': {
         NODE_ENV: JSON.stringify('developement')
       }
-    })
+    }),
+    new BundleAnalyzerPlugin()
   ],
   devtool: 'source-map',
   devServer: {
