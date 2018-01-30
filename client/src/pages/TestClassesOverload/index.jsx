@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
-import { Wrapper, Tco1, Tco2 } from './sc'
+import { Wrapper, result, ELEMENTS_COUNT } from './sc'
 
 type Props = {}
 type State = {}
@@ -14,7 +14,7 @@ class TestClassesOverload extends Component<Props, State> {
 
     this.elements = []
 
-    for (let i = 0; i < 1000; i += 1) {
+    for (let i = 0; i < ELEMENTS_COUNT; i += 1) {
       this.elements.push(i)
     }
   }
@@ -22,14 +22,11 @@ class TestClassesOverload extends Component<Props, State> {
   render() {
     return (
       <Wrapper>
-        {this.elements.map(
-          index =>
-            index % 2 ? (
-              <Tco1 key={`tco-${index}`} />
-            ) : (
-              <Tco2 key={`tco-${index}`} />
-            )
-        )}
+        {this.elements.map(index => {
+          const Component = result[`Tco${index}`]
+
+          return <Component key={`tco-${index}`} />
+        })}
       </Wrapper>
     )
   }
