@@ -1,7 +1,7 @@
 // @flow
 import React, { Component, type Node } from 'react'
 
-import { Wrapper } from './sc'
+import * as classes from './classes'
 
 type Props = {
   children: Node
@@ -9,7 +9,7 @@ type Props = {
 
 class Layout extends Component<Props> {
   render() {
-    return <Wrapper>{this.props.children}</Wrapper>
+    return <main className={classes.container}>{this.props.children}</main>
   }
 }
 

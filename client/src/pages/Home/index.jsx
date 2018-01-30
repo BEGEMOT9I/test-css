@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
-import { Wrapper } from './sc'
+import * as classes from './classes'
 
 type Props = {}
 type State = {}
@@ -10,9 +10,9 @@ class Home extends Component<Props, State> {
 
   render() {
     return (
-      <Wrapper>
+      <section className={classes.container}>
         <h1>Hi</h1>
-      </Wrapper>
+      </section>
     )
   }
 }

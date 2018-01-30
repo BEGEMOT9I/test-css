@@ -1,7 +1,7 @@
 // @flow
 import React, { Component } from 'react'
 
-import { Wrapper, result, ELEMENTS_COUNT } from './sc'
+import { container, result, ELEMENTS_COUNT } from './classes'
 
 type Props = {}
 type State = {}
@@ -21,13 +21,11 @@ class TestClassesOverload extends Component<Props, State> {
 
   render() {
     return (
-      <Wrapper>
-        {this.elements.map(index => {
-          const Component = result[`Tco${index}`]
-
-          return <Component key={`tco-${index}`} />
-        })}
-      </Wrapper>
+      <section className={container}>
+        {this.elements.map(index => (
+          <div key={`tco-${index}`} className={result[`Tco${index}`]} />
+        ))}
+      </section>
     )
   }
 }
