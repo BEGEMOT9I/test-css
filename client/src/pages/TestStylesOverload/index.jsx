@@ -1,13 +1,12 @@
 // @flow
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 import { Wrapper, result, ELEMENTS_COUNT } from './sc'
 
 type Props = {}
 type State = {}
 
-class TestClassesOverload extends Component<Props, State> {
+class TestStylesOverload extends Component<Props, State> {
   elements: Array<number>
 
   constructor(props: Props) {
@@ -27,10 +26,9 @@ class TestClassesOverload extends Component<Props, State> {
           const Component = result[`Tco${index}`]
           return <Component key={`tco-${index}`} />
         })}
-        <Link to="test-styles-overload">Test styles overload</Link>
       </Wrapper>
     )
   }
 }
 
-export default TestClassesOverload
+export default TestStylesOverload
