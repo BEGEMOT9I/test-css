@@ -1,7 +1,7 @@
 // @flow
 import cxs from 'cxs/component'
 
-const ELEMENTS_COUNT = 10000
+const ELEMENTS_COUNT = 1000
 
 const Wrapper = cxs('section')({
   display: 'flex',

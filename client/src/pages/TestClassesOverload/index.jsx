@@ -1,5 +1,6 @@
 // @flow
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 import { Wrapper, result, ELEMENTS_COUNT } from './sc'
 
@@ -26,6 +27,7 @@ class TestClassesOverload extends Component<Props, State> {
           const Component = result[`Tco${index}`]
           return <Component key={`tco-${index}`} />
         })}
+        <Link to="test-styles-overload">Test styles overload</Link>
       </Wrapper>
     )
   }
