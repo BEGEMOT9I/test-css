@@ -14,7 +14,7 @@ class TestClassesOverload extends Component<Props, State> {
 
     this.elements = []
 
-    for (let i = 0; i < 1000; i += 1) {
+    for (let i = 0; i < 10000; i += 1) {
       this.elements.push(i)
     }
   }
